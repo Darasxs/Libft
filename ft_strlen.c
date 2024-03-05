@@ -21,4 +21,4 @@ ft_strlen(const char *s)
         len++;
     }
     return len;
-}   
+}
