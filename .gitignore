@@ -1,2 +1,7 @@
-.out
-.Dstore
+.vscode
+.DS_Store
+*.gch
+*.out
+*.o
+output/
+build/debug
