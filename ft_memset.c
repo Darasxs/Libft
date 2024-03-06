@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 11:14:31 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 11:08:09 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/05 11:33:59 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/06 11:36:30 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s)
-{
-    size_t len;
+void ft_memset(void *b, int c, size_t len)
+{   
+    unsigned char *ptr;
+    size_t i;
+
+    ptr = (unsigned char *)b;
+    i = 0;
     
-    len = 0;
-
-    while (s[len] != '\0')
+    while(i < len)
     {
-        len++;
+        ptr[i] = (unsigned char)c;
+        i++;
     }
-    return len;
 }
-// #include <stdio.h>
-
 // int main(void)
 // {
-//     const char word[] = "kapelusz";
-//     size_t length = ft_strlen(word);
-    
-//     printf("Length of the string: %zu\n", length);
+//     char array[10];
+//     int i = 0;
+
+//     ft_memset(array, '{', sizeof(array));
+
+//     while(i < sizeof(array))
+//     {
+//         printf("%c ", array[i]);
+//         i++;
+//     }
+//     printf("\n");
 
 //     return 0;
 // }

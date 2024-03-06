@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 11:14:31 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 11:08:09 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/06 11:16:57 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/06 13:17:36 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s)
+void ft_bzero(void *s, size_t n)
 {
-    size_t len;
-    
-    len = 0;
+    unsigned char *ptr;
+    size_t i;
 
-    while (s[len] != '\0')
+    ptr = (unsigned char *)s;
+    i = 0;
+
+    while(i < n)
     {
-        len++;
+        ptr[i] = 0;
+        i++;
     }
-    return len;
 }
-// #include <stdio.h>
 
 // int main(void)
 // {
-//     const char word[] = "kapelusz";
-//     size_t length = ft_strlen(word);
-    
-//     printf("Length of the string: %zu\n", length);
+//     unsigned char word[] = "strazak";
+//     size_t len = sizeof(word);
+
+//     ft_bzero(word, len);
+
+//     printf("%s\n",word);
 
 //     return 0;
 // }

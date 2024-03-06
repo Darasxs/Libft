@@ -6,9 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:54:05 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/05 11:31:21 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/06 11:36:55 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 ft_isascii(int c)
 {
