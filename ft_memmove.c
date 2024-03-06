@@ -1,42 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 13:18:15 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 13:56:34 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/06 17:46:13 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-void ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void ft_memmove(void *dst, const void *src, size_t len)
 {
     char *d = (char *)dst;
     const char *s = (const char *)src;
-
     size_t i;
 
     i = 0;
 
-    while(i < n)
+    if(d > s)
     {
-        d[i] = s[i];
-        i++;
+        while(len > 0)
+        {
+            len--;
+            d[len] = s[len];
+        }
     }
+    else
+        while(i < len)
+        {
+            d[i] = s[i];
+            i++;
+        }
 
+    return;
 }
-// int main(void)
-// {
-//     char source[] = "hello world!";
-//     char dest[13];
-//     size_t len = sizeof(source) + 1;
+int main()
+{
+    char test[] = "123456789";
+    printf("Original string: %s\n", test);
 
-//     ft_memcpy(dest, source, len);
+    ft_memmove(test + 3, test +4, 1);
+    printf("After memmove (overlapping to the right): %s\n", test);
 
-//     printf("Copied string: %s", dest);
-
-//     return 0;
-// }
+    return 0;   
+}
