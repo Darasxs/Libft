@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 17:46:13 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:54:44 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ void ft_memmove(void *dst, const void *src, size_t len)
 
     return;
 }
-int main()
-{
-    char test[] = "123456789";
-    printf("Original string: %s\n", test);
+// int main()
+// {
+//     char test[] = "123456789";
+//     printf("Original string: %s\n", test);
 
-    ft_memmove(test + 3, test +4, 1);
-    printf("After memmove (overlapping to the right): %s\n", test);
+//     ft_memmove(test + 3, test +4, 1);
+//     printf("After memmove (overlapping to the right): %s\n", test);
 
-    return 0;   
-}
+//     return 0;   
+// }
