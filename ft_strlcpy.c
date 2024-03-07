@@ -6,9 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:47:07 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 19:03:58 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:14:01 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {

@@ -6,38 +6,31 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/06 17:56:20 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/07 14:47:31 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = libft.a
+BINARY = libft.a
 
-SRC = ft_isalpha.c \
-	ft_isdigit.c \
-	ft_isalnum.c
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c
 
-OBJECTS = ${SRC:.c=.o}
+OBJECTS = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
-INCLUDES = ./
+all: $(BINARY)
 
-${NAME}: ${OBJECTS}
-	ar rc ${NAME} ${OBJECTS}
-	ranlib ${NAME}
+%.o: %.c
+	${CC} ${FLAGS} -c $< -o $@
 
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES}
+$(BINARY): $(OBJECTS)
+	ar rcs $(BINARY) $(OBJECTS)
 
-all: ${NAME}
+clean:
+	rm -rf	${OBJECTS}
 
-clean: 
-	rm -rf ${OBJECTS}
-
-fclean: clean
-	rm ${NAME}
-
-re: fclean all
+fclean:	clean
+	rm -rf ${BINARY}
