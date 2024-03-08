@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/07 14:47:31 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/08 15:16:49 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,3 +34,4 @@ clean:
 
 fclean:	clean
 	rm -rf ${BINARY}
+

@@ -1,42 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 13:18:15 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/08 16:29:09 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/08 17:39:55 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/08 18:03:48 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    char *d = (char *)dst;
-    const char *s = (const char *)src;
-
+    char *str1;
+    char *str2;
     size_t i;
 
     i = 0;
+    str1 = (char *)s1;
+    str2 = (char *)s2;
+
+    if (n == 0)
+        return 0;
 
     while(i < n)
     {
-        d[i] = s[i];
+        if(str1[i] > str2[i])
+            return 1;
+        if(str2[i] > str1[i])
+            return -1;
         i++;
     }
-
+    return 0;
 }
-// int main(void)
+// #include <string.h>
+// int main()
 // {
-//     char source[] = "hello world!";
-//     char dest[13];
-//     size_t len = sizeof(source) + 1;
-
-//     ft_memcpy(dest, source, len);
-
-//     printf("Copied string: %s", dest);
-
+//     int result1 = ft_memcmp("hello", "hello", 5);
+//     int result2 = ft_memcmp("xabfaaa", "abdbbb", 4);
+//     printf("%d\n", result1);
+//     printf("%d\n", result2);
 //     return 0;
 // }
