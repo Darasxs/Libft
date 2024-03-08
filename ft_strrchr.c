@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 15:00:58 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/07 16:48:46 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/08 13:26:51 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/08 14:25:04 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,53 +14,60 @@
 
 size_t ft_strlen(const char *s);
 
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+char *ft_strrchr(const char *s, int c)
 {
     size_t i;
-    size_t j;
-    size_t src_len;
 
-    i = 0;  
-    j = 0;  
+    i = ft_strlen(s);
 
-    while(i < dstsize - 1 && dst[i] != '\0')
+    if(s == NULL)
+        return NULL;
+
+    if(c == '\0')
     {
-        i++;
+        return((char *)&s[i]);
     }
 
-    while(src[j] != '\0' && (i + j) < dstsize)
+    while(i > 0)
     {
-        dst[i + j] = src[j];
-        j++;
+        i--;
+        if (s[i] == c)
+        {
+            return((char *)&s[i]);
+        }
     }
-        
-    if(i < dstsize)
-        dst[i + j] = '\0';
+    return NULL;
     
-    src_len = ft_strlen(src);
-    return i + src_len;
 }
+
 size_t ft_strlen(const char *s)
 {
     size_t len;
-    
+
     len = 0;
 
     while(s[len] != '\0')
     {
         len++;
     }
+    
     return len;
 }
 // int main()
 // {
-//     char dest[20] = "hello, ";
-//     char src[] = "world!";
-//     size_t len = sizeof(dest);
+//     char *word = "iyajsasda";
+//     int d = 'a';
+    
+//     char *result = ft_strrchr(word, d);
 
-//     ft_strlcat(dest, src, len);
-
-//     printf("%s\n", dest);
+//     if(result != NULL)
+//     {
+//         printf("Character '%c' found at position: %ld\n", *result, result - word);
+//     }
+//     else
+//     {
+//         printf("Character '%c' not found.\n", d);
+//     }
 
 //     return 0;
 // }
