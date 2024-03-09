@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:18:15 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:12:03 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:01:04 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	const char	*s;
 	size_t		i;
 
-	*d = (char *)dst;
-	*s = (const char *)src;
+	d = (char *)dst;
+	s = (const char *)src;
 	i = 0;
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
+	return (dst);
 }
 // int main(void)
 // {

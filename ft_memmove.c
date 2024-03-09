@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:16:53 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:01:37 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_memmove(void *dst, const void *src, size_t len)
 	const char	*s;
 	size_t		i;
 
-	*d = (char *)dst;
-	*s = (const char *)src;
+	d = (char *)dst;
+	s = (const char *)src;
 	i = 0;
 	if (d > s)
 	{

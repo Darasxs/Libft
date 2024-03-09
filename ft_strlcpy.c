@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:47:07 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:35:23 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:03:22 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = "\0";
+	dst[i] = '\0';
+
+	return (i);
 }
