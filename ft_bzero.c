@@ -6,27 +6,25 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:16:57 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 13:17:36 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:34:24 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr;
-    size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (unsigned char *)s;
-    i = 0;
-
-    while(i < n)
-    {
-        ptr[i] = 0;
-        i++;
-    }
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
-
 // int main(void)
 // {
 //     unsigned char word[] = "strazak";

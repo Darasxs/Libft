@@ -6,37 +6,39 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/06 17:54:44 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:16:53 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void ft_memmove(void *dst, const void *src, size_t len)
+void	ft_memmove(void *dst, const void *src, size_t len)
 {
-    char *d = (char *)dst;
-    const char *s = (const char *)src;
-    size_t i;
+	char		*d;
+	const char	*s;
+	size_t		i;
 
-    i = 0;
-
-    if(d > s)
-    {
-        while(len > 0)
-        {
-            len--;
-            d[len] = s[len];
-        }
-    }
-    else
-        while(i < len)
-        {
-            d[i] = s[i];
-            i++;
-        }
-
-    return;
+	*d = (char *)dst;
+	*s = (const char *)src;
+	i = 0;
+	if (d > s)
+	{
+		while (len > 0)
+		{
+			len--;
+			d[len] = s[len];
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return ;
 }
 // int main()
 // {
