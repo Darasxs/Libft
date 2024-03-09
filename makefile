@@ -6,13 +6,15 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/09 16:05:56 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/09 16:19:44 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
 
-BINARY = libft.a
+${NAME} : all
 
+all: libft.a 
 SRC = ft_atoi.c \
       ft_bzero.c \
       ft_isalpha.c \
@@ -41,16 +43,16 @@ FLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
-all: $(BINARY)
-
-%.o: %.c
+%.o: %.c libft.h
 	${CC} ${FLAGS} -c $< -o $@
 
-$(BINARY): $(OBJECTS)
-	ar rcs $(BINARY) $(OBJECTS)
+$(NAME): $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
 
 clean:
 	rm -rf	${OBJECTS}
 
 fclean:	clean
-	rm -rf ${BINARY}
+	rm -rf ${NAME}
+
+re: fclean all
