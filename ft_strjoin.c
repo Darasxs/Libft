@@ -1,55 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 17:29:23 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/10 17:29:43 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/10 17:54:55 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+size_t ft_strlen(const char *s);
+
+char *ft_strjoin(char const *s1, char const *s2)
 {
+	char	*new;
 	size_t	i;
 	size_t	j;
-	char	*new;
 
 	i = 0;
 	j = 0;
-	new = (char *)malloc(sizeof(char) * (len + 1));
-	
-	if(s == NULL || new == NULL)
+	new = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	
-	while(s[i] != '\0')
-	{
-		if(i >= start && j < len)
-		{
-			new[j] = s[i];
-			j++;
-		}
-		i++;
-	}
+
+	while(s1[i] != '\0')
+		new[j++] = s1[i++];
+
+	i = 0;
+
+	while(s2[i] != '0')
+		new[j++] = s2[i++];
+
 	new[j] = '\0';
 
 	return(new);
 }
 
-//#include <string.h>
-//int main()
-//{
-//	char word1[] = "hello world";
-//	int start = 3;
-//	size_t len = strlen(word1) - start;
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
 
-//	char *result = ft_substr(word1, start, len);
-//	printf("%s ", result);
-
-//	free(result);
-
-//	return 0;
-//}
+	len = 0;
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
