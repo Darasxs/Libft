@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 14:25:38 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:25:47 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/10 11:21:43 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //     printf("%d\n", result1);
 //     printf("%d\n", result2);
 //     return 0;
-// }
+// } 

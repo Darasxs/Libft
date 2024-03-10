@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:00:58 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 18:53:59 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/10 11:17:22 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,16 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t i;
-	size_t j;
-	size_t k;
-
+	size_t result;
+	
 	i = 0;
-	j = 0;
+	while(dst[i] != '\0' && i < dstsize)
+	{
+		i++;
+	}
 
-
+	result = ft_strlcpy(&dst[i], src, dstsize - i);
+	return(result + i);
 }
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {

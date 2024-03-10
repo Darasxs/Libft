@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 11:16:57 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 15:14:47 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/10 16:38:06 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*ptr;
-	size_t			i;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	size_t i;
+	size_t j;
+	char *str;
+	
+	str = (char *)malloc(sizeof(*s) * len + 1);
+	
 }
- int main(void)
- {
-     unsigned char word[] = "strazak";
-     size_t len = sizeof(word);
-
-     ft_bzero(word, len);
-
-     printf("%s\n",word);
-
-     return 0;
- }

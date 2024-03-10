@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:39:55 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:35:07 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/10 11:56:17 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (str1[i] > str2[i])
+		if ((unsigned char)str1[i] > (unsigned char)str2[i])
 			return (1);
-		if (str2[i] > str1[i])
+		if ((unsigned char )str2[i] > (unsigned char)str1[i])
 			return (-1);
 		i++;
 	}

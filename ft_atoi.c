@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 12:40:52 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 14:48:23 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/10 12:50:25 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,34 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
 	int	sign;
 	int	final_number;
+	int	counter;
 
-	i = 0;
-	sign = 1;
 	final_number = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
+	counter = 0;
+	sign = 1;
+	while ((*str >= 9 && *str <= 13) || (*str == 32))
+		str++;
+	while (*str == '+' || *str == '-')
 	{
-		i++;
+		if (*str == '-')
+			sign *= -1;
+		counter++;
+		if (counter > 1)
+			return (0);
+		str++;
 	}
-	while (str[i] == '-' || str[i] == '+')
+	while (*str >= '0' && *str <= '9')
 	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		final_number = final_number * 10 + (str[i] - '0');
-		i++;
+		final_number = final_number * 10 + (*str - '0');
+		str++;
 	}
 	return (final_number * sign);
 }
 // int main()
 // {
-//     char check[] = "--+-9219s12ss";
+//     char check[] = "+-9219s12ss";
 //     int result = ft_atoi(check);
 //     printf("%d\n", result);
 
