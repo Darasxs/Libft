@@ -6,12 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 16:28:25 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 09:47:31 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:16:57 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 15:14:47 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 09:47:48 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
- int main(void)
- {
-     unsigned char word[] = "strazak";
-     size_t len = sizeof(word);
+// int main(void)
+// {
+//     unsigned char word[] = "strazak";
+//     size_t len = sizeof(word);
 
-     ft_bzero(word, len);
+//     ft_bzero(word, len);
 
-     printf("%s\n",word);
+//     printf("%s\n",word);
 
-     return 0;
- }
+//     return 0;
+// }

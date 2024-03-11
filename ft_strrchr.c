@@ -6,13 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:26:51 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:33:03 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 09:46:37 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -34,18 +32,6 @@ char	*ft_strrchr(const char *s, int c)
 		}
 	}
 	return (NULL);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
 }
 // int main()
 // {

@@ -6,13 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:56:48 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 16:18:04 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 09:47:21 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,16 +31,4 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 
 	return (str);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
 }

@@ -6,13 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:29:43 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 17:54:55 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 09:47:15 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t ft_strlen(const char *s);
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -38,16 +36,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 	new[j] = '\0';
 
 	return(new);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
 }
