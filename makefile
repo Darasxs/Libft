@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/10 18:44:08 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/11 09:59:09 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ SRC = ft_atoi.c \
       ft_strdup.c \
       ft_substr.c \
       ft_strjoin.c \
-      ft_strtrim.c
+      ft_strtrim.c \
+      ft_split.c
 
 OBJECTS = $(SRC:.c=.o)
 
