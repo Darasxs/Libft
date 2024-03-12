@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:33:59 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 16:15:01 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/11 12:05:31 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memset(void *b, int c, size_t len)
 //     char array[10];
 //     int i = 0;
 
-//     ft_memset(array, '{', sizeof(array));
+//     ft_memset(array, 's', sizeof(array));
 
 //     while(i < sizeof(array))
 //     {

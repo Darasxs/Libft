@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 17:29:23 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:07:23 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return(new);
 }
 
-//#include <string.h>
 //int main()
 //{
 //	char word1[] = "hello world";
