@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/13 09:19:16 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/13 11:18:23 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,12 @@ SRC = ft_atoi.c \
       ft_strtrim.c \
       ft_split.c \
       ft_itoa.c \
-      ft_strmapi.c
+      ft_strmapi.c \
+      ft_striteri.c \
+      ft_putchar_fd.c \
+      ft_putstr_fd.c \
+      ft_putendl_fd.c \
+      ft_putnbr_fd.c
 
 OBJECTS = $(SRC:.c=.o)
 

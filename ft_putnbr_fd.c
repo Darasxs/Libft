@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 19:29:34 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/13 10:35:27 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/13 11:17:40 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/13 12:31:05 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putchar_fd(char c, int fd)
 {
-	char			*str;
-	unsigned int	i;
-
-	if (s == NULL)
-		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		str[i] = (*f)(i, s[i]);
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	write(fd, &c, 1);
 }
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if(n < 10)
+	{
+		ft_putchar_fd(n + '0', fd);
+		return;
+	}
+	ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
+
+}
+//int main()
+//{
+//	int i;
+//	ft_putnbr_fd(-112322, 1);
+
+//	return 0;
+//}
