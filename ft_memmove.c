@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:57:04 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/11 09:47:31 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:13:11 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
 // int main()
 // {
 //     char test[] = "123456789";

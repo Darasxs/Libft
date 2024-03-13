@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/11 09:59:09 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/13 09:19:16 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 ${NAME} : all
 
-all: libft.a 
+all: libft.a
 SRC = ft_atoi.c \
       ft_bzero.c \
       ft_isalpha.c \
@@ -41,7 +41,9 @@ SRC = ft_atoi.c \
       ft_substr.c \
       ft_strjoin.c \
       ft_strtrim.c \
-      ft_split.c
+      ft_split.c \
+      ft_itoa.c \
+      ft_strmapi.c
 
 OBJECTS = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 12:40:52 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 12:50:25 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:08:09 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 }
 // int main()
 // {
-//     char check[] = "+-9219s12ss";
+//     char check[] = "-+9219s12ss";
 //     int result = ft_atoi(check);
 //     printf("%d\n", result);
 
