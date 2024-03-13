@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:47:07 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/12 15:42:01 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:36:02 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 //int main(void)
 //{
 //    char dest[20];
-//    size_t result = ft_strlcpy(dest, "lorem ipsum dolor sit amet", 15);
-//    printf("%lu$\n", result);
-//    write(1, "s\n", 1);
+//    size_t result = ft_strlcpy(dest, "hello world", 15);
+//    printf("\n", result);
 //    write(1, dest, 15);
 
 //    return 0;

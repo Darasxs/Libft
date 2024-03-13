@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/13 11:18:23 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/13 18:23:00 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 ${NAME} : all
 
 all: libft.a
+
 SRC = ft_atoi.c \
       ft_bzero.c \
       ft_isalpha.c \
@@ -50,7 +51,11 @@ SRC = ft_atoi.c \
       ft_putendl_fd.c \
       ft_putnbr_fd.c
 
+BONUS = ft_lstnew.c
+
 OBJECTS = $(SRC:.c=.o)
+
+BONUS_OBJECTS = $(BONUS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -63,9 +68,14 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
 clean:
-	rm -rf	${OBJECTS}
+	rm -rf ${OBJECTS}
 
 fclean:	clean
-	rm -rf ${NAME}
+	rm -rf ${NAME} ${BONUS_OBJECTS}
 
 re: fclean all
+
+bonus: $(BONUS_OBJECTS) $(OBJECTS)
+	ar rcs $(NAME) $(BONUS_OBJECTS) $(OBJECTS)
+
+.PHONY: all clean fclean re bonus

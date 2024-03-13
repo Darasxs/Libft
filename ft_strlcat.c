@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:00:58 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/11 09:47:06 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:40:58 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	{
 		i++;
 	}
-
+	
 	result = ft_strlcpy(&dst[i], src, dstsize - i);
 	return(result + i);
 }
 
-// int main()
-// {
-//     char dest[20] = "hello, ";
+//int main()
+//{
+//     char dest[10] = "hello, ";
 //     char src[] = "world!";
 //     size_t len = sizeof(dest);
 
@@ -38,4 +38,4 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 //     printf("%s\n", dest);
 
 //     return 0;
-// }
+//}
