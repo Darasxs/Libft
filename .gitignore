@@ -5,3 +5,4 @@
 *.o
 output/
 build/debug
+*.dSYM

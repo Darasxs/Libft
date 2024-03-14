@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 18:04:19 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:31 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:31:45 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (needle == NULL || *needle == '\0')
+	if (!ft_strlen(needle))
 		return ((char *)haystack);
-	if (haystack == NULL)
+	if (!ft_strlen(haystack))
+		return (NULL);
+	if (len < ft_strlen(needle))
 		return (NULL);
 	i = 0;
 	while (haystack[i] != '\0' && i < len)
@@ -47,7 +49,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 //     char *result = ft_strnstr(haystack, needle, 15);
 
 //     if(result != NULL)
-// printf("The needle (%s) pos: %ld\n", needle, (long)(result - haystack));
+// printf("The needle (%s) pos: %ld\n ", needle, (long)(result - haystack));
 //     else
 // printf("the needle (%s) was not found in the haystack.", needle);
 //     return (0);

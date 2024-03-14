@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:56:48 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:09 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:53:51 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	i = 0;
-	if (s1 == NULL)
-		return (NULL);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (str == NULL)
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		str[i] = s1[i];

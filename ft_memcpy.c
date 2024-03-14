@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:18:15 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 09:43:10 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:19:00 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	d = (char *)dst;
 	s = (const char *)src;
+	if (dst == NULL && src == NULL)
+		return (dst);
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:47:07 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:19 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:04:02 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 //    char dest[20];
 //    size_t result = ft_strlcpy(dest, "hello world", 15);
 //    printf("\n", result);
-//    write(1, dest, 15);
+//    write(1, dest, 15); 
 
 //    return (0);
 //}

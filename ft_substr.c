@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:58:09 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:02:49 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
-		return (NULL);
-	if((size_t)start > ft_strlen(s))
+	if (s == NULL || start > ft_strlen(s))
 		return (ft_strdup(""));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
 	new = malloc(sizeof(char) * (len + 1));
 	if (new == NULL)
 		return (NULL);
@@ -49,7 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 //	char *result = ft_substr(word1, start, len);
 //	printf("%s ", result);
 
-//	free(result);
+//	return(result);
 
 //	return (0);
 //}
