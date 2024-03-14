@@ -6,28 +6,27 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:00:58 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/13 15:40:58 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:16 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t result;
-	
+	size_t	i;
+	size_t	result;
+
 	i = 0;
-	while(dst[i] != '\0' && i < dstsize)
+	while (dst[i] != '\0' && i < dstsize)
 	{
 		i++;
 	}
-	
 	result = ft_strlcpy(&dst[i], src, dstsize - i);
-	return(result + i);
+	return (result + i);
 }
 
-//int main()
+// int main()
 //{
 //     char dest[10] = "hello, ";
 //     char src[] = "world!";
@@ -37,5 +36,5 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 
 //     printf("%s\n", dest);
 
-//     return 0;
+//     return (0);
 //}

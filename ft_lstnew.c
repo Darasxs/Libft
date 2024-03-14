@@ -6,8 +6,10 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:16:53 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/13 18:16:56 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:04:33 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstnew(void *content);
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content);

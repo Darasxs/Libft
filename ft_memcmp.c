@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:39:55 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/10 11:56:17 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 09:19:49 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 //     printf("%d\n", result1);
 //     printf("%d\n", result2);
 //     return 0;
-// }
+// } 

@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:48:24 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:33:27 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:41 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int	ft_tolower(int c)
 
 //     printf("%c", letter);
 
-//     return 0;
+//     return (0);
 // }

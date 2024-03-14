@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:16:57 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/11 13:53:30 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:04:37 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void	ft_bzero(void *s, size_t n)
 
 //     printf("%s\n",word);
 
-//     return 0;
+//     return (0);
 // }

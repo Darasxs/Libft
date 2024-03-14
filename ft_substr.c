@@ -6,13 +6,13 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/12 11:07:23 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:58:09 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -20,14 +20,16 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	new = (char *)malloc(sizeof(char) * (len + 1));
-	
-	if(s == NULL || new == NULL)
+	if (s == NULL)
 		return (NULL);
-	
-	while(s[i] != '\0')
+	if((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
+	new = malloc(sizeof(char) * (len + 1));
+	if (new == NULL)
+		return (NULL);
+	while (s[i] != '\0' && i < start + len)
 	{
-		if(i >= start && j < len)
+		if (i >= start)
 		{
 			new[j] = s[i];
 			j++;
@@ -35,11 +37,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	new[j] = '\0';
-
-	return(new);
+	return (new);
 }
 
-//int main()
+// int main()
 //{
 //	char word1[] = "hello world";
 //	int start = 3;
@@ -50,5 +51,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 //	free(result);
 
-//	return 0;
+//	return (0);
 //}

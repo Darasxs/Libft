@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 10:25:27 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/12 12:03:09 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:04 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static size_t	ft_count_words(const char *s, char c)
 	return (counter);
 }
 
-//ft_free_split(char **split)
+// ft_free_split(char **split)
 //{
 //	size_t i;
 

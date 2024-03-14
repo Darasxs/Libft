@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 11:11:12 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/13 11:14:00 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:06:38 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;

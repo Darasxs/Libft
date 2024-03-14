@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:33:59 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/11 12:05:31 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:04:46 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	*ft_memset(void *b, int c, size_t len)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-
 	return (b);
 }
 // int main(void)
@@ -41,5 +40,5 @@ void	*ft_memset(void *b, int c, size_t len)
 //     }
 //     printf("\n");
 
-//     return 0;
+//     return (0);
 // }

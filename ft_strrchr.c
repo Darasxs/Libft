@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:26:51 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/13 15:33:59 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:33 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
-	if (s == NULL)
-		return (NULL);
-	if (c == '\0')
+	if ((char)c == '\0')
 	{
 		return ((char *)&s[i]);
 	}
 	while (i > 0)
 	{
 		i--;
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return ((char *)&s[i]);
 		}
@@ -40,11 +38,11 @@ char	*ft_strrchr(const char *s, int c)
 //    char *result = ft_strrchr(word, d);
 //     if(result != NULL)
 //     {
-//printf("Character '%c' found at position: %ld\n", *result, result - word);
+// printf("Character '%c' found at position: %ld\n", *result, result - word);
 //     }
 //     else
 //     {
 //         printf("Character '%c' not found.\n", d);
 //     }
-//     return 0;
+//     return (0);
 // }

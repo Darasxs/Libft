@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:48:23 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/09 15:33:57 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:43 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int	ft_toupper(int c)
 //     char letter = 'j';
 //     letter = ft_toupper(letter);
 //     printf("%c", letter);
-//     return 0;
+//     return (0);
 // }
