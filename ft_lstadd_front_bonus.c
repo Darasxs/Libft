@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 18:16:53 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:04:33 by dpaluszk         ###   ########.fr       */
+/*   Created: 2024/03/15 13:06:48 by dpaluszk          #+#    #+#             */
+/*   Updated: 2024/03/15 13:07:19 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+{
+	
+}

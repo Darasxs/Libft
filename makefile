@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/14 12:45:37 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/15 13:07:56 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,8 @@ SRC = ft_atoi.c \
       ft_putendl_fd.c \
       ft_putnbr_fd.c
 
-BONUS = ft_lstnew.c
+BONUS = ft_lstnew_bonus.c \
+        ft_lstadd_front.c
 
 OBJECTS = $(SRC:.c=.o)
 
