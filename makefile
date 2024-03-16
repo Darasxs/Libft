@@ -6,7 +6,7 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/15 13:07:56 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/16 09:06:00 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,10 @@ SRC = ft_atoi.c \
       ft_putnbr_fd.c
 
 BONUS = ft_lstnew_bonus.c \
-        ft_lstadd_front.c
+      ft_lstadd_front_bonus.c \
+      ft_lstsize_bonus.c \
+      ft_lstlast_bonus.c \
+      void ft_lstadd_back_bonus.c
 
 OBJECTS = $(SRC:.c=.o)
 
