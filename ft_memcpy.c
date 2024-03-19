@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:18:15 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 15:19:00 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:30:46 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //     char dest[13];
 //     size_t len = sizeof(source) + 1;
 
-//     ft_memcpy(dest, source, len);
+//     ft_memcpy(dest, source, 7);
 
 //     printf("Copied string: %s", dest);
 

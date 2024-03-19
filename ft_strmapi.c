@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 19:29:34 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:25 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/18 17:23:21 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
-	unsigned int	i;
+	size_t			i;
 
 	if (s == NULL)
 		return (NULL);
@@ -31,3 +31,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+	

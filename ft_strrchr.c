@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:26:51 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:33 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/18 17:08:44 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = ft_strlen(s);
 	if ((char)c == '\0')
-	{
 		return ((char *)&s[i]);
-	}
 	while (i > 0)
 	{
 		i--;
 		if (s[i] == (char)c)
-		{
 			return ((char *)&s[i]);
-		}
 	}
 	return (NULL);
 }

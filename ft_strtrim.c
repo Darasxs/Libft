@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 18:43:10 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:07:11 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/19 11:19:49 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	size_t	beginning;
 	size_t	end;
-	size_t	k;
+	size_t	new;
 
 	beginning = 0;
-	k = 0;
+	end = ft_strlen(s1);
+	new = 0;
 	while (s1[beginning] != '\0' && ft_check(s1[beginning], set))
 		beginning++;
-	end = ft_strlen(s1);
 	while (end > beginning && ft_check(s1[end - 1], set))
 		end--;
 	str = (char *)malloc(sizeof(char) * (end - beginning + 1));
 	if (str == NULL)
 		return (NULL);
 	while (beginning < end)
-		str[k++] = s1[beginning++];
-	str[k] = '\0';
+		str[new++] = s1[beginning++];
+	str[new] = '\0';
 	return (str);
 }
 

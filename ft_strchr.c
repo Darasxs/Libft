@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:28:13 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:06 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/18 17:08:52 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
-		{
 			return ((char *)&s[i]);
-		}
 		i++;
 	}
 	if ((char)c == '\0')
-	{
 		return ((char *)&s[i]);
-	}
 	return (NULL);
 }
 
