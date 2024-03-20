@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:29:43 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/14 19:04:59 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 16:53:20 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[j] = '\0';
 	return (new);
 }
-

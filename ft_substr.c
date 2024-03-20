@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/20 14:34:01 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 16:54:06 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (new == NULL)
 		return (NULL);
 	while (s[i] != '\0' && i < start + len)
-	{	
+	{
 		if (i >= start)
 		{
 			new[j] = s[i];
