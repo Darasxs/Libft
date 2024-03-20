@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 10:25:27 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/20 01:15:05 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:26:05 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,31 +68,28 @@ static void	ft_free_memory(char **s)
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
-	size_t	i;
 	size_t	split;
 
-	i = 0;
 	split = 0;
 	new = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (new == NULL)
 		return (NULL);
-	while (s[i] != '\0')
+	while (*s)
 	{
-		while (s[i] != '\0' && s[i] == c)
-			i++;
-		if (s[i] != '\0' && s[i] != c)
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
 		{
-			new[split++] = ft_copying_words(&s[i], c);
+			new[split++] = ft_copying_words(s, c);
 			if (new[split - 1] == NULL)
 			{
 				ft_free_memory(new);
 				return (NULL);
 			}
-			while (s[i] != '\0' && s[i] != c)
-				i++;
+			while (*s && *s != c)
+				s++;
 		}
 	}
 	new[split] = NULL;
-
 	return (new);
 }
