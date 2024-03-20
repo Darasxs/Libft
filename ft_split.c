@@ -6,43 +6,12 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 10:25:27 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/19 11:30:52 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:15:05 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(const char *s, char c);
-
-char	**ft_split(char const *s, char c)
-{
-	char	**split;
-	size_t	i;
-	size_t	j;
-
-	if (s == NULL)
-		return (NULL);
-	i = 0;
-	split = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (split == NULL)
-		return (NULL);
-	while (*s)
-	{
-		if (*s != c)
-		{
-			j = 0;
-			while (*s && *s != c && ++j)
-				++s;
-			split[i++] = ft_substr(s - j, 0, j);
-		}
-		else
-			s++;
-	}
-	split[i] = 0;
-	return (split);
-}
-
-// we have the main string and we want to count how many substrings are there
 static size_t	ft_count_words(const char *s, char c)
 {
 	size_t	i;
@@ -62,19 +31,68 @@ static size_t	ft_count_words(const char *s, char c)
 	return (counter);
 }
 
-//ft_free_split(char **split)
-//{
-//	size_t i;
+static size_t	ft_count_length(const char *s, char c)
+{
+	size_t	i;
 
-//	i = 0;
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
+}
 
-//	if (split == NULL)
-//		return (NULL);
-//	while (split[i] != '\0')
-//	{
-//		free(split[i]);
-//		i++;
-//	}
+static char	*ft_copying_words(const char *s, char c)
+{
+	size_t	len;
+	char	*new;
 
-//	free(split);
-//}
+	len = ft_count_length(s, c);
+	new = malloc(sizeof(char) * (len + 1));
+	if (new == NULL)
+		return (NULL);
+	ft_strlcpy(new, s, len + 1);
+	return (new);
+}
+static void	ft_free_memory(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != NULL)
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+}
+char	**ft_split(char const *s, char c)
+{
+	char	**new;
+	size_t	i;
+	size_t	split;
+
+	i = 0;
+	split = 0;
+	new = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (new == NULL)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		while (s[i] != '\0' && s[i] == c)
+			i++;
+		if (s[i] != '\0' && s[i] != c)
+		{
+			new[split++] = ft_copying_words(&s[i], c);
+			if (new[split - 1] == NULL)
+			{
+				ft_free_memory(new);
+				return (NULL);
+			}
+			while (s[i] != '\0' && s[i] != c)
+				i++;
+		}
+	}
+	new[split] = NULL;
+
+	return (new);
+}

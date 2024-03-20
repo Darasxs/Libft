@@ -6,15 +6,13 @@
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/17 10:26:25 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/19 19:40:21 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-${NAME} : all
-
-all: libft.a
+all: ${NAME}
 
 SRC = ft_atoi.c \
       ft_bzero.c \

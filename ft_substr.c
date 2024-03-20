@@ -6,12 +6,40 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/19 10:47:26 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:41:27 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//size_t	ft_strlen(const char *s)
+//{
+//	size_t	len;
+
+//	len = 0;
+//	while (s[len] != '\0')
+//	{
+//		len++;
+//	}
+//	return (len);
+//}
+//char	*ft_strdup(const char *s1)
+//{
+//	char	*str;
+//	size_t	i;
+
+//	i = 0;
+//	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+//	if (str == NULL)
+//		return (NULL);
+//	while (s1[i] != '\0')
+//	{
+//		str[i] = s1[i];
+//		i++;
+//	}
+//	str[i] = '\0';
+//	return (str);
+//}
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
@@ -43,13 +71,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 //{
 //	char word1[] = "hello world";
-//	int start = 3;
+//	int start = 5;
 //	size_t len = strlen(word1) - start;
 
 //	char *result = ft_substr(word1, start, len);
 //	printf("%s ", result);
-
-//	return(result);
 
 //	return (0);
 //}
