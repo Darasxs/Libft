@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 13:06:48 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/16 09:26:05 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:02:43 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = lst[0];
+	new->next = *lst;
 	*lst = new;
 }

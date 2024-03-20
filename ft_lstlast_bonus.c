@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 08:24:30 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/16 09:03:45 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:50:14 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ t_list *ft_lstlast(t_list *lst)
 	if (final == NULL)
 		return (NULL);
 	while(final -> next != NULL)
-	{
 		final = final -> next;
-	}
+
 	return (final);
 }

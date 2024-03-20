@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 10:25:27 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/20 01:26:05 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 16:05:52 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static char	*ft_copying_words(const char *s, char c)
 	ft_strlcpy(new, s, len + 1);
 	return (new);
 }
+
 static void	ft_free_memory(char **s)
 {
 	int	i;
@@ -65,6 +66,7 @@ static void	ft_free_memory(char **s)
 	}
 	free(s);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new;

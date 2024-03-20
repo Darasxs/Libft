@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 09:04:34 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/16 10:05:08 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/20 11:07:54 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *temp;
+	t_list	*tmp;
 
-	if(*lst == NULL)
+	if (*lst == NULL)
 		*lst = new;
 	else
 	{
-		temp = ft_lstlast(*lst);
-		temp -> next = new;
+		tmp = *lst;
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		tmp->next = new;
 	}
 }
