@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 11:17:40 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/20 16:53:08 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/21 15:43:16 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd(n % 10 + '0', fd);
 }
+
 // int main()
 //{
 //	int i;
