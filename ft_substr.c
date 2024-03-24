@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:21:08 by dpaluszk          #+#    #+#             */
-/*   Updated: 2024/03/20 16:54:06 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:57:34 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 //{
 //	char word1[] = "hello world";
-//	int start = 2;
+//	int start = 4;
 //	size_t len = strlen(word1) - start;
 
 //	char *result = ft_substr(word1, start, len);
