@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 09:10:47 by dpaluszk          #+#    #+#              #
-#    Updated: 2024/03/21 10:42:05 by dpaluszk         ###   ########.fr        #
+#    Updated: 2024/03/27 15:02:08 by dpaluszk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,6 @@ BONUS = ft_lstnew_bonus.c \
       ft_lstclear_bonus.c \
       ft_lstiter_bonus.c \
       ft_lstmap_bonus.c
-
 
 OBJECTS = $(SRC:.c=.o)
 
